@@ -1,104 +1,112 @@
 ## This CodeBook describes the variables, the data and transformations performed
 ### The variables used and the data
 The data set was obtained from the given link on the course project webpage whose original source is reference [1]. The interpretation of variables is the following:
-* **Subject**: person's ID (who carried out the experiment) form 1 to 30
-* **Activity**: there are 6 activity types (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING)
-* **X, Y and Z**: 3D signals along x, y or z cartesian directions
+* **subject**: person's ID (who carried out the experiment) form 1 to 30
+* **activity**: there are 6 activity types (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING)
+* **x, y and z**: 3D signals along x, y or z cartesian directions
 * **t** (first letter in the variable names): time domain signals
-* **Acc**: accelerometer signals
-* **Gyro**: gyroscope signals
-* **BodyAcc and GravityAcc**: acceleration signal was separated into body and gravity signals
-* **BodyAccJerk and BodyGyroJerk**: jerk signals are derived from body acceleration and angular velocity
-* **Mag**: magnitudes are calculated from 3D signal vectors
+* **acc**: accelerometer signals
+* **gyro**: gyroscope signals
+* **bodyacc and gravityacc**: acceleration signal was separated into body and gravity signals
+* **bodyaccjerk and bodygyrojerk**: jerk signals are derived from body acceleration and angular velocity
+* **mag**: magnitudes are calculated from 3D signal vectors
+* **angle**: angle between two vectors
 * **f** (first letter in the variable names): frequency domain signals derived from time signals after performing first fourier transformations
 * **mean**: average value of the given signal
 * **std**: standard deviation of the given signal
 
 Below are the names of the variable used in the tidy data set:
 
-| Name of Variables            |
-|------------------------------|
-| Subject                      |
-| Activity                     |
-| tBodyAccmeanX                |
-| tBodyAccmeanY                |
-| tBodyAccmeanZ                |
-| tBodyAccstdX                 |
-| tBodyAccstdY                 |
-| tBodyAccstdZ                 |
-| tGravityAccmeanX             |
-| tGravityAccmeanY             |
-| tGravityAccmeanZ             |
-| tGravityAccstdX              |
-| tGravityAccstdY              |
-| tGravityAccstdZ              |
-| tBodyAccJerkmeanX            |
-| tBodyAccJerkmeanY            |
-| tBodyAccJerkmeanZ            |
-| tBodyAccJerkstdX             |
-| tBodyAccJerkstdY             |
-| tBodyAccJerkstdZ             |
-| tBodyGyromeanX               |
-| tBodyGyromeanY               |
-| tBodyGyromeanZ               |
-| tBodyGyrostdX                |
-| tBodyGyrostdY                |
-| tBodyGyrostdZ                |
-| tBodyGyroJerkmeanX           |
-| tBodyGyroJerkmeanY           |
-| tBodyGyroJerkmeanZ           |
-| tBodyGyroJerkstdX            |
-| tBodyGyroJerkstdY            |
-| tBodyGyroJerkstdZ            |
-| tBodyAccMagmean              |
-| tBodyAccMagstd               |
-| tGravityAccMagmean           |
-| tGravityAccMagstd            |
-| tBodyAccJerkMagmean          |
-| tBodyAccJerkMagstd           |
-| tBodyGyroMagmean             |
-| tBodyGyroMagstd              |
-| tBodyGyroJerkMagmean         |
-| tBodyGyroJerkMagstd          |
-| fBodyAccmeanX                |
-| fBodyAccmeanY                |
-| fBodyAccmeanZ                |
-| fBodyAccstdX                 |
-| fBodyAccstdY                 |
-| fBodyAccstdZ                 |
-| fBodyAccmeanFreqX            |
-| fBodyAccmeanFreqY            |
-| fBodyAccmeanFreqZ            |
-| fBodyAccJerkmeanX            |
-| fBodyAccJerkmeanY            |
-| fBodyAccJerkmeanZ            |
-| fBodyAccJerkstdX             |
-| fBodyAccJerkstdY             |
-| fBodyAccJerkstdZ             |
-| fBodyAccJerkmeanFreqX        |
-| fBodyAccJerkmeanFreqY        |
-| fBodyAccJerkmeanFreqZ        |
-| fBodyGyromeanX               |
-| fBodyGyromeanY               |
-| fBodyGyromeanZ               |
-| fBodyGyrostdX                |
-| fBodyGyrostdY                |
-| fBodyGyrostdZ                |
-| fBodyGyromeanFreqX           |
-| fBodyGyromeanFreqY           |
-| fBodyGyromeanFreqZ           |
-| fBodyAccMagmean              |
-| fBodyAccMagstd               |
-| fBodyAccMagmeanFreq          |
-| fBodyBodyAccJerkMagmean      |
-| fBodyBodyAccJerkMagstd       |
-| fBodyBodyAccJerkMagmeanFreq  |
-| fBodyBodyGyroMagmean         |
-| fBodyBodyGyroMagstd          |
-| fBodyBodyGyroMagmeanFreq     |
-| fBodyBodyGyroJerkMagmean     |
-| fBodyBodyGyroJerkMagstd      |
-| fBodyBodyGyroJerkMagmeanFreq |
+| name of variables                 |
+|-----------------------------------|
+| subject                           |
+| activity                          |
+| tbodyaccmeanx                     |
+| tbodyaccmeany                     |
+| tbodyaccmeanz                     |
+| tbodyaccstdx                      |
+| tbodyaccstdy                      |
+| tbodyaccstdz                      |
+| tgravityaccmeanx                  |
+| tgravityaccmeany                  |
+| tgravityaccmeanz                  |
+| tgravityaccstdx                   |
+| tgravityaccstdy                   |
+| tgravityaccstdz                   |
+| tbodyaccjerkmeanx                 |
+| tbodyaccjerkmeany                 |
+| tbodyaccjerkmeanz                 |
+| tbodyaccjerkstdx                  |
+| tbodyaccjerkstdy                  |
+| tbodyaccjerkstdz                  |
+| tbodygyromeanx                    |
+| tbodygyromeany                    |
+| tbodygyromeanz                    |
+| tbodygyrostdx                     |
+| tbodygyrostdy                     |
+| tbodygyrostdz                     |
+| tbodygyrojerkmeanx                |
+| tbodygyrojerkmeany                |
+| tbodygyrojerkmeanz                |
+| tbodygyrojerkstdx                 |
+| tbodygyrojerkstdy                 |
+| tbodygyrojerkstdz                 |
+| tbodyaccmagmean                   |
+| tbodyaccmagstd                    |
+| tgravityaccmagmean                |
+| tgravityaccmagstd                 |
+| tbodyaccjerkmagmean               |
+| tbodyaccjerkmagstd                |
+| tbodygyromagmean                  |
+| tbodygyromagstd                   |
+| tbodygyrojerkmagmean              |
+| tbodygyrojerkmagstd               |
+| fbodyaccmeanx                     |
+| fbodyaccmeany                     |
+| fbodyaccmeanz                     |
+| fbodyaccstdx                      |
+| fbodyaccstdy                      |
+| fbodyaccstdz                      |
+| fbodyaccmeanfreqx                 |
+| fbodyaccmeanfreqy                 |
+| fbodyaccmeanfreqz                 |
+| fbodyaccjerkmeanx                 |
+| fbodyaccjerkmeany                 |
+| fbodyaccjerkmeanz                 |
+| fbodyaccjerkstdx                  |
+| fbodyaccjerkstdy                  |
+| fbodyaccjerkstdz                  |
+| fbodyaccjerkmeanfreqx             |
+| fbodyaccjerkmeanfreqy             |
+| fbodyaccjerkmeanfreqz             |
+| fbodygyromeanx                    |
+| fbodygyromeany                    |
+| fbodygyromeanz                    |
+| fbodygyrostdx                     |
+| fbodygyrostdy                     |
+| fbodygyrostdz                     |
+| fbodygyromeanfreqx                |
+| fbodygyromeanfreqy                |
+| fbodygyromeanfreqz                |
+| fbodyaccmagmean                   |
+| fbodyaccmagstd                    |
+| fbodyaccmagmeanfreq               |
+| fbodybodyaccjerkmagmean           |
+| fbodybodyaccjerkmagstd            |
+| fbodybodyaccjerkmagmeanfreq       |
+| fbodybodygyromagmean              |
+| fbodybodygyromagstd               |
+| fbodybodygyromagmeanfreq          |
+| fbodybodygyrojerkmagmean          |
+| fbodybodygyrojerkmagstd           |
+| fbodybodygyrojerkmagmeanfreq      |
+| angletbodyaccmeangravity          |
+| angletbodyaccjerkmeangravitymean  |
+| angletbodygyromeangravitymean     |
+| angletbodygyrojerkmeangravitymean |
+| anglexgravitymean                 |
+| angleygravitymean                 |
+| anglezgravitymean                 |
 
 ### The transformations
 According the project instructions, I performed the following transformations:
