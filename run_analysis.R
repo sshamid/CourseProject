@@ -27,10 +27,10 @@ trainingsetX <- read.table(paste(datafolder, "train", "X_train.txt", sep = "/"),
                            header = FALSE, col.names = featureVector$features)
 # Read training activity ids and set name
 trainingsety <- read.table(paste(datafolder, "train", "y_train.txt", sep = "/"),
-                           header = FALSE, col.names = "activity")
+                           header = FALSE, col.names = "Activity")
 # Read traning person ids and set name
 trainingsetPersonIDs <- read.table(paste(datafolder, "train", "subject_train.txt", sep = "/"),
-                           header = FALSE, col.names = "subject")
+                           header = FALSE, col.names = "Subject")
 # Read test data and set names using feature vector
 testsetX <- read.table(paste(datafolder, "test", "X_test.txt", sep = "/"),
                        header = FALSE, col.names = featureVector$features)
@@ -47,7 +47,7 @@ personIDs <- rbind(trainingsetPersonIDs, testsetPersonIDs)
 # Extract only mean and SD features
 Xdata2fs <- Xdata[, grep("mean|std", featureVector$features)]
 # give descriptive activity names to name the activities
-ydata$activity <- actlabels[ydata$activity,]$activities
+ydata$Activity <- actlabels[ydata$Activity,]$activities
 # Merge data sets together so that it labels the data set with descriptive activity names
 cleandata <- cbind(personIDs, ydata, Xdata2fs)
 # write the clean data to a csv file

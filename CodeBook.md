@@ -7,16 +7,16 @@ The data set was obtained from the given link on the course project webpage whos
 * **t** (first letter in the variable names): time domain signals
 * **Acc**: accelerometer signals
 * **Gyro**: gyroscope signals
-* **BodyAcc and GravityAcc**: acceleration signal was separated into bocy and gravity signals
-* **BodyAccJerk and BodyGyroJerk**: jerk signals are derived from body acceleration and ang. velocity
+* **BodyAcc and GravityAcc**: acceleration signal was separated into body and gravity signals
+* **BodyAccJerk and BodyGyroJerk**: jerk signals are derived from body acceleration and angular velocity
 * **Mag**: magnitudes are calculated from 3D signal vectors
-* **f** (first letter in the variable names): frequency domain signals derived from time signals performing fourier transformations
-* **mean**: average value of the given signal in a signal window sample
-* **std**: standard deviation of the given signal in a signal window sample
+* **f** (first letter in the variable names): frequency domain signals derived from time signals after performing first fourier transformations
+* **mean**: average value of the given signal
+* **std**: standard deviation of the given signal
 
 Below are the names of the variable used in the tidy data set:
 
-|                             |
+| Name of Variables            |
 |------------------------------|
 | Subject                      |
 | Activity                     |
