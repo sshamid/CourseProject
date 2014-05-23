@@ -109,7 +109,7 @@ According the project instructions, I performed the following transformations:
 * give descriptive activity names to name the activities
 * compute the feature averages grouped by subject and activity
 
-The run_analysis.R script is inline commented carefully to indicate which parts of the code are responsible for which transformations. The final data set lists averages grouped by subject and activity across the data set. 
+The run_analysis.R script is inline commented carefully to indicate which parts of the code are responsible for which transformations. The final data set (with dimensions 180 X 81) lists averages grouped by subject and activity across the data set. 
 
 Reference:
 
